@@ -3,15 +3,15 @@ from scrap_bot import scrap_bot
 
 import pandas as pd
 
-asiento = '0000'
-tomo = '0000'
-provincia = 0
+asiento = '0997'
+tomo = '0775'
+provincia = 1
 
 
 bot = scrap_bot()
 bot.access()
 
-for i in range(1): #10005
+while True:
     asiento = cedula.generar_asiento(asiento)
     tomo = cedula.generar_tomo(asiento, tomo)
     
@@ -33,6 +33,6 @@ for i in range(1): #10005
         
         bot.nueva_consulta()
     except:
-        bot.consulta_cedula()
+        bot.nueva_consulta()
         
 bot.drvr.close()

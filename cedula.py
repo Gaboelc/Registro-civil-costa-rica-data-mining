@@ -12,10 +12,6 @@ class cedula:
             asiento = int(asiento)+1
             asiento = '0'+str(asiento)
             return asiento
-        elif int(asiento) > 998 and int(asiento) < 9999:
-            asiento = int(asiento)+1
-            asiento = str(asiento)
-            return asiento
         else:
             print('Asientos completos')
             asiento = '0000'
@@ -38,7 +34,7 @@ class cedula:
             tomo = int(tomo)+1
             tomo = str(tomo)
             return tomo
-        elif int(tomo) > 9999:
+        elif int(tomo) > 999:
             tomo = '0000'
             return tomo
         else:

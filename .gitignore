@@ -43,4 +43,5 @@ pip-selfcheck.json
 .vscode/*
 
 ### Data ###
-./data.csv
+./*.csv
+*.csv
