@@ -104,10 +104,3 @@ class scrap_bot:
             return self.data
         except:
             print('Cedula no encontrada')
-            
-bot = scrap_bot()
-
-bot.access()
-bot.consulta('118220515')
-bot.collect_data()
-bot.nueva_consulta()

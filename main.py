@@ -1,10 +1,24 @@
 from cedula import cedula
+from scrap_bot import scrap_bot
 
-asiento = 1
-tomo = 1
+import pandas as pd
+
+asiento = '0514'
+tomo = '1822'
 provincia = 1
 
-for i in range(10005):
+
+bot = scrap_bot()
+bot.access()
+
+for i in range(5): #10005
     asiento = cedula.generar_asiento(asiento)
     tomo = cedula.generar_tomo(asiento, tomo)
-    print(provincia, tomo, asiento)
+    
+    cedula_consulta = str(provincia)+str(tomo)+str(asiento)
+    
+    bot.consulta(cedula_consulta)
+    
+    bot.collect_data()
+    
+    bot.nueva_consulta()
