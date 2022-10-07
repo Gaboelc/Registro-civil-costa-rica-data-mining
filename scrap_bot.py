@@ -12,24 +12,24 @@ class scrap_bot:
         try:
             self.drvr.get('https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx')
             print('''
-                  --------------------------------------------------------------------
+                  ====================================================================
                                         Pagina accesada correctamente!
-                  --------------------------------------------------------------------''')
-            sleep(3)
+                  ====================================================================''')
+            sleep(2)
         except:
             print('''
-                  ---------------------------------------------------------------------
+                  ====================================================================
                                            Pagina no accesada!
-                  ---------------------------------------------------------------------''')
+                  ====================================================================''')
             
     def consulta(self, cedula):
         cedula_input = self.drvr.find_element('id', 'txtcedula')
         cedula_input.send_keys(str(cedula))
         print(f'''
-                  --------------------------------------------------------------------
+                  ====================================================================
                    Consulta nueva va a ser realizada
                    La cedula a ser consultada va a ser: {cedula}
-                  --------------------------------------------------------------------''')
+                  ====================================================================''')
         consulta = self.drvr.find_element('id', 'btnConsultaCedula')
         consulta.click()
         sleep(8)
@@ -38,21 +38,25 @@ class scrap_bot:
         try:
             consulta_cedula = self.drvr.find_element('xpath', '//*[@id="ImageConsultaCedula"]') 
             consulta_cedula.click()
-            #sleep(5)
+            #sleep(3)
         except:
-            print('Cedula no enconterada')
+            print('''
+                  ====================================================================
+                                          Cedula no encontrada
+                  ====================================================================
+                  ''')
             regresar = self.drvr.find_element('id', 'Button1')
             regresar.click()
-            #sleep(3)
+            sleep(1)
             consulta_por_cedula = self.drvr.find_element('xpath', '/html/body/table/tbody/tr/td/div/div[2]/a[2]')
             consulta_por_cedula.click()
             
     def collect_data(self):
         try:
             print('''
-                  --------------------------------------------------------------------
-        	                             Recolectando los datos!
-        	      --------------------------------------------------------------------''')
+                  ====================================================================
+                                        Recolectando los datos!
+                  ====================================================================''')
             self.cedula = self.drvr.find_element('id', 'lblcedula').text
             self.nombre = self.drvr.find_element('id', 'lblnombrecompleto').text
             self.conocido = self.drvr.find_element('id', 'lblconocidocomo').text
@@ -103,4 +107,8 @@ class scrap_bot:
             
             return self.data
         except:
-            print('Cedula no encontrada')
+            print('''
+                  ====================================================================
+                                          Datos no recolectados
+                  ====================================================================
+                  ''')
