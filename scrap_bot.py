@@ -32,13 +32,13 @@ class scrap_bot:
                   ====================================================================''')
         consulta = self.drvr.find_element('id', 'btnConsultaCedula')
         consulta.click()
-        sleep(8)
+        sleep(2)
         
     def nueva_consulta(self):
         try:
             consulta_cedula = self.drvr.find_element('xpath', '//*[@id="ImageConsultaCedula"]') 
             consulta_cedula.click()
-            #sleep(3)
+            sleep(2)
         except:
             print('''
                   ====================================================================
@@ -47,9 +47,10 @@ class scrap_bot:
                   ''')
             regresar = self.drvr.find_element('id', 'Button1')
             regresar.click()
-            sleep(1)
+            sleep(2)
             consulta_por_cedula = self.drvr.find_element('xpath', '/html/body/table/tbody/tr/td/div/div[2]/a[2]')
             consulta_por_cedula.click()
+            sleep(2)
             
     def collect_data(self):
         try:
