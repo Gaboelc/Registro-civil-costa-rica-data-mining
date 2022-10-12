@@ -1,5 +1,6 @@
 from selenium import webdriver
 from time import sleep
+import logging
 
 class scrap_bot:
     
@@ -8,6 +9,14 @@ class scrap_bot:
         self.drvr = webdriver.Chrome(self.webdriver_path)
         self.drvr.maximize_window()
         
+        logging.basicConfig(
+            level=logging.INFO,
+            format='{asctime} {levelname:<8} {message}',
+            style='{',
+            filename='%slog' % __file__[:-2],
+            filemode='w'
+        )
+        
     def access(self):
         try:
             self.drvr.get('https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx')
@@ -15,12 +24,14 @@ class scrap_bot:
                   ====================================================================
                                         Pagina accesada correctamente!
                   ====================================================================''')
-            sleep(2)
+            logging.info('Pagina accesada correctamente')
+            sleep(3)
         except:
             print('''
                   ====================================================================
                                            Pagina no accesada!
                   ====================================================================''')
+            logging.error('Pagina no accesada')
             
     def consulta(self, cedula):
         cedula_input = self.drvr.find_element('id', 'txtcedula')
@@ -30,27 +41,31 @@ class scrap_bot:
                    Consulta nueva va a ser realizada
                    La cedula a ser consultada va a ser: {cedula}
                   ====================================================================''')
+        
+        logging.info('Consulta nueva va a ser realizada')
+        logging.info(f'La cedula a ser consultada es: {cedula}')
         consulta = self.drvr.find_element('id', 'btnConsultaCedula')
         consulta.click()
-        sleep(2)
+        sleep(3)
         
     def nueva_consulta(self):
         try:
             consulta_cedula = self.drvr.find_element('xpath', '//*[@id="ImageConsultaCedula"]') 
             consulta_cedula.click()
-            sleep(2)
+            sleep(3)
         except:
             print('''
                   ====================================================================
                                           Cedula no encontrada
                   ====================================================================
                   ''')
+            logging.error('Cedula no encontrada')
             regresar = self.drvr.find_element('id', 'Button1')
             regresar.click()
-            sleep(2)
+            sleep(3)
             consulta_por_cedula = self.drvr.find_element('xpath', '/html/body/table/tbody/tr/td/div/div[2]/a[2]')
             consulta_por_cedula.click()
-            sleep(2)
+            sleep(3)
             
     def collect_data(self):
         try:
@@ -106,6 +121,8 @@ class scrap_bot:
                     Cedula de la madre: {self.cedula_madre}
                   --------------------------------------------------------------------''')
             
+            logging.info('Datos recolectados')
+            
             return self.data
         except:
             print('''
@@ -113,3 +130,4 @@ class scrap_bot:
                                           Datos no recolectados
                   ====================================================================
                   ''')
+            logging.error('Datos no recolectados')
