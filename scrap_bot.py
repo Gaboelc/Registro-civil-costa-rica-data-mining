@@ -35,22 +35,24 @@ class scrap_bot:
         sleep(2)
         
     def nueva_consulta(self):
-        try:
-            consulta_cedula = self.drvr.find_element('xpath', '//*[@id="ImageConsultaCedula"]') 
-            consulta_cedula.click()
-            sleep(2)
-        except:
-            print('''
-                  ====================================================================
-                                          Cedula no encontrada
-                  ====================================================================
-                  ''')
-            regresar = self.drvr.find_element('id', 'Button1')
-            regresar.click()
-            sleep(2)
-            consulta_por_cedula = self.drvr.find_element('xpath', '/html/body/table/tbody/tr/td/div/div[2]/a[2]')
-            consulta_por_cedula.click()
-            sleep(2)
+        self.drvr.get('https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx')
+        sleep(1)
+        # try:
+        #     consulta_cedula = self.drvr.find_element('xpath', '//*[@id="ImageConsultaCedula"]') 
+        #     consulta_cedula.click()
+        #     sleep(2)
+        # except:
+        #     print('''
+        #           ====================================================================
+        #                                   Cedula no encontrada
+        #           ====================================================================
+        #           ''')
+        #     regresar = self.drvr.find_element('id', 'Button1')
+        #     regresar.click()
+        #     sleep(2)
+        #     consulta_por_cedula = self.drvr.find_element('xpath', '/html/body/table/tbody/tr/td/div/div[2]/a[2]')
+        #     consulta_por_cedula.click()
+        #     sleep(2)
             
     def collect_data(self):
         try:
@@ -75,7 +77,6 @@ class scrap_bot:
                 self.conocido = None
             else:
                 self.conocido = self.conocido
-                
             if self.marginal == 'NO':
                 self.marginal = False
             else:
