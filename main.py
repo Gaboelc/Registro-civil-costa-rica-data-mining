@@ -3,7 +3,7 @@ from scrap_bot import scrap_bot
 
 import pandas as pd
 
-asiento = '0338'
+asiento = '0340'
 tomo = '0828'
 provincia = 1
 
