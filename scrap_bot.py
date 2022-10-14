@@ -49,7 +49,7 @@ class scrap_bot:
         logging.info(f'La cedula a ser consultada es: {cedula}')
         consulta = self.drvr.find_element('id', 'btnConsultaCedula')
         consulta.click()
-        sleep(1.5)
+        sleep(1)
         
     def nueva_consulta(self):
         try:
@@ -126,6 +126,7 @@ class scrap_bot:
                     Nombre de la madre: {self.madre}
                     Cedula de la madre: {self.cedula_madre}
                   --------------------------------------------------------------------''')
+            logging.info('Datos recolectados')
             
             return self.data
         except:
@@ -134,3 +135,4 @@ class scrap_bot:
                                           Datos no recolectados
                   ====================================================================
                   ''')
+            logging.error('Datos no recolectados')
