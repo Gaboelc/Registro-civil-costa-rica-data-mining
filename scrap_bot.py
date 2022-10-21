@@ -1,8 +1,7 @@
 from selenium import webdriver
-from time import sleep
-
-from selenium import webdriver
-from time import sleep
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import logging
 
 class scrap_bot:
@@ -28,7 +27,6 @@ class scrap_bot:
                                         Pagina accesada correctamente!
                   ====================================================================''')
             logging.info('Pagina accesada correctamente')
-            sleep(3)
         except:
             print('''
                   ====================================================================
@@ -49,15 +47,10 @@ class scrap_bot:
         logging.info(f'La cedula a ser consultada es: {cedula}')
         consulta = self.drvr.find_element('id', 'btnConsultaCedula')
         consulta.click()
-        sleep(1)
         
     def nueva_consulta(self):
         try:
             self.drvr.get('https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx')
-            sleep(1)
-            # consulta_cedula = self.drvr.find_element('xpath', '//*[@id="ImageConsultaCedula"]') 
-            # consulta_cedula.click()
-            # sleep(3)
         except:
             print('''
                   ====================================================================
@@ -66,16 +59,10 @@ class scrap_bot:
                   ''')
             logging.error('Cedula no encontrada')
             self.drvr.get('https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx')
-            sleep(1)
-            # regresar = self.drvr.find_element('id', 'Button1')
-            # regresar.click()
-            # sleep(3)
-            # consulta_por_cedula = self.drvr.find_element('xpath', '/html/body/table/tbody/tr/td/div/div[2]/a[2]')
-            # consulta_por_cedula.click()
-            # sleep(3)
     
     def collect_data(self):
         try:
+            element = WebDriverWait(self.drvr, 10).until(EC.presence_of_all_elements_located((By.ID, 'TABLE1')))
             print('''
                   ====================================================================
                                         Recolectando los datos!
