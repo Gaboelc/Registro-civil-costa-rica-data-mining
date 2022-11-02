@@ -1,20 +1,15 @@
-2022-10-21 03:49:53,539 INFO     Pagina accesada correctamente
-2022-10-21 03:49:54,900 INFO     Consulta nueva va a ser realizada
-2022-10-21 03:49:54,901 INFO     La cedula a ser consultada es: 109340938
-2022-10-21 03:49:56,195 INFO     Datos recolectados
-2022-10-21 03:50:00,439 INFO     Consulta nueva va a ser realizada
-2022-10-21 03:50:00,439 INFO     La cedula a ser consultada es: 109340939
-2022-10-21 03:50:01,653 INFO     Datos recolectados
-2022-10-21 03:50:07,737 INFO     Consulta nueva va a ser realizada
-2022-10-21 03:50:07,738 INFO     La cedula a ser consultada es: 109340940
-2022-10-21 03:50:09,459 INFO     Datos recolectados
-2022-10-21 03:50:14,384 INFO     Consulta nueva va a ser realizada
-2022-10-21 03:50:14,384 INFO     La cedula a ser consultada es: 109340941
-2022-10-21 03:50:15,813 INFO     Datos recolectados
-2022-10-21 03:50:21,578 INFO     Consulta nueva va a ser realizada
-2022-10-21 03:50:21,578 INFO     La cedula a ser consultada es: 109340942
-2022-10-21 03:50:22,898 INFO     Datos recolectados
-2022-10-21 03:50:29,854 ERROR    Cedula no encontrada
-2022-10-21 03:50:34,291 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C3EAD61FF0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/7fd94f3da3eea7d9d674f34aeeb07384/url
-2022-10-21 03:50:38,338 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C3EAD60C70>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/7fd94f3da3eea7d9d674f34aeeb07384/url
-2022-10-21 03:50:42,408 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C3EAD61810>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/7fd94f3da3eea7d9d674f34aeeb07384/url
+2022-11-02 03:13:14,562 INFO     Pagina accesada correctamente
+2022-11-02 03:13:14,565 INFO     Asiento completado
+2022-11-02 03:13:16,394 INFO     Consulta nueva va a ser realizada
+2022-11-02 03:13:16,395 INFO     La cedula a ser consultada es: 110000000
+2022-11-02 03:13:26,563 ERROR    Datos no recolectados
+2022-11-02 03:13:28,992 INFO     Consulta nueva va a ser realizada
+2022-11-02 03:13:28,992 INFO     La cedula a ser consultada es: 110000001
+2022-11-02 03:13:30,737 INFO     Datos recolectados
+2022-11-02 03:13:36,547 INFO     Consulta nueva va a ser realizada
+2022-11-02 03:13:36,547 INFO     La cedula a ser consultada es: 110000002
+2022-11-02 03:13:39,670 ERROR    Datos no recolectados
+2022-11-02 03:13:42,058 ERROR    Cedula no encontrada
+2022-11-02 03:13:46,222 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D65C28250>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/4106841fa93896edd006f7700181c38c/url
+2022-11-02 03:13:50,928 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D65C28430>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/4106841fa93896edd006f7700181c38c/url
+2022-11-02 03:13:55,354 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D65C28D30>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/4106841fa93896edd006f7700181c38c/url

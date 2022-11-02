@@ -1,4 +1,5 @@
 from selenium import webdriver
+import chromedriver_binary
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,7 +9,7 @@ class scrap_bot:
     
     def __init__(self):
         self.webdriver_path = 'webdriver\chromedriver.exe'
-        self.drvr = webdriver.Chrome(self.webdriver_path)
+        self.drvr = webdriver.Chrome() #self.webdriver_path
         self.drvr.maximize_window()
         
         logging.basicConfig(
