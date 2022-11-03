@@ -62,7 +62,7 @@ class scrap_bot:
     
     def collect_data(self):
         try:
-            element = WebDriverWait(self.drvr, 10).until(EC.presence_of_all_elements_located((By.ID, 'TABLE1')))
+            element = WebDriverWait(self.drvr, 5).until(EC.presence_of_all_elements_located((By.ID, 'TABLE1')))
             print('''
                   ====================================================================
                                         Recolectando los datos!

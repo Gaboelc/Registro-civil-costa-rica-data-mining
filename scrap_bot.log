@@ -1,15 +1,13 @@
-2022-11-02 03:13:14,562 INFO     Pagina accesada correctamente
-2022-11-02 03:13:14,565 INFO     Asiento completado
-2022-11-02 03:13:16,394 INFO     Consulta nueva va a ser realizada
-2022-11-02 03:13:16,395 INFO     La cedula a ser consultada es: 110000000
-2022-11-02 03:13:26,563 ERROR    Datos no recolectados
-2022-11-02 03:13:28,992 INFO     Consulta nueva va a ser realizada
-2022-11-02 03:13:28,992 INFO     La cedula a ser consultada es: 110000001
-2022-11-02 03:13:30,737 INFO     Datos recolectados
-2022-11-02 03:13:36,547 INFO     Consulta nueva va a ser realizada
-2022-11-02 03:13:36,547 INFO     La cedula a ser consultada es: 110000002
-2022-11-02 03:13:39,670 ERROR    Datos no recolectados
-2022-11-02 03:13:42,058 ERROR    Cedula no encontrada
-2022-11-02 03:13:46,222 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D65C28250>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/4106841fa93896edd006f7700181c38c/url
-2022-11-02 03:13:50,928 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D65C28430>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/4106841fa93896edd006f7700181c38c/url
-2022-11-02 03:13:55,354 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D65C28D30>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/4106841fa93896edd006f7700181c38c/url
+2022-11-03 01:40:40,445 INFO     Pagina accesada correctamente
+2022-11-03 01:40:40,705 INFO     Consulta nueva va a ser realizada
+2022-11-03 01:40:40,705 INFO     La cedula a ser consultada es: 110120681
+2022-11-03 01:40:43,882 INFO     Datos recolectados
+2022-11-03 01:40:44,485 INFO     Consulta nueva va a ser realizada
+2022-11-03 01:40:44,486 INFO     La cedula a ser consultada es: 110120682
+2022-11-03 01:40:45,836 INFO     Datos recolectados
+2022-11-03 01:40:46,780 INFO     Consulta nueva va a ser realizada
+2022-11-03 01:40:46,781 INFO     La cedula a ser consultada es: 110120683
+2022-11-03 01:40:48,363 INFO     Datos recolectados
+2022-11-03 01:40:57,701 INFO     Consulta nueva va a ser realizada
+2022-11-03 01:40:57,701 INFO     La cedula a ser consultada es: 110120684
+2022-11-03 01:41:00,733 INFO     Datos recolectados
