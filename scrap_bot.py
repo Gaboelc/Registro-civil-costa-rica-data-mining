@@ -63,10 +63,10 @@ class scrap_bot:
     def collect_data(self):
         try:
             element = WebDriverWait(self.drvr, 5).until(EC.presence_of_all_elements_located((By.ID, 'TABLE1')))
-            print('''
-                  ====================================================================
-                                        Recolectando los datos!
-                  ====================================================================''')
+            # print('''
+            #       ====================================================================
+            #                             Recolectando los datos!
+            #       ====================================================================''')
             self.cedula = self.drvr.find_element('id', 'lblcedula').text
             self.nombre = self.drvr.find_element('id', 'lblnombrecompleto').text
             self.conocido = self.drvr.find_element('id', 'lblconocidocomo').text
@@ -96,30 +96,30 @@ class scrap_bot:
                          'Cedula del padre': self.cedula_padre, 'Nombre de la madre': self.madre,
                          'Cedula de la madre': self.cedula_madre}
             
-            print(f'''
-                  --------------------------------------------------------------------
-                  Datos Recolectados:
-                    Nombre Completo: {self.nombre}
-                    Cedula: {self.cedula}
-                    Fecha de nacimiento: {self.fecha_nacimiento}
-                    Edad: {self.edad}
-                    Nacionalidad: {self.nacionalidad}
-                    Marginal: {self.marginal}
-                    Conocido/a como: {self.conocido}
+            # print(f'''
+            #       --------------------------------------------------------------------
+            #       Datos Recolectados:
+            #         Nombre Completo: {self.nombre}
+            #         Cedula: {self.cedula}
+            #         Fecha de nacimiento: {self.fecha_nacimiento}
+            #         Edad: {self.edad}
+            #         Nacionalidad: {self.nacionalidad}
+            #         Marginal: {self.marginal}
+            #         Conocido/a como: {self.conocido}
                     
-                    Nombre del padre: {self.padre}
-                    Cedula del padre: {self.cedula_padre}
+            #         Nombre del padre: {self.padre}
+            #         Cedula del padre: {self.cedula_padre}
                     
-                    Nombre de la madre: {self.madre}
-                    Cedula de la madre: {self.cedula_madre}
-                  --------------------------------------------------------------------''')
+            #         Nombre de la madre: {self.madre}
+            #         Cedula de la madre: {self.cedula_madre}
+            #       --------------------------------------------------------------------''')
             logging.info('Datos recolectados')
             
             return self.data
         except:
-            print('''
-                  ====================================================================
-                                          Datos no recolectados
-                  ====================================================================
-                  ''')
+            # print('''
+            #       ====================================================================
+            #                               Datos no recolectados
+            #       ====================================================================
+            #       ''')
             logging.error('Datos no recolectados')
